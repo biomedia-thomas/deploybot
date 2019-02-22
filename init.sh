@@ -1,16 +1,15 @@
 #!/bin/bash
 cd /tmp/
 apt-get update -qq
-apt-get install -qq -y git curl wget php7.0-cli zip php7.0-curl php7.0-bz2 php7.0-zip php7.0-xml php7.0-mbstring 
+apt-get install -qq -y git curl wget php7.2-cli zip php7.2-curl php7.2-bz2 php7.2-zip php7.2-xml php7.2-mbstring 
 git clone --quiet https://github.com/creationix/nvm.git $HOME/.nvm
 ~/.nvm/install.sh
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-nvm install 6.10
-nvm use 6.10
-npm install -g gulp
+nvm install 8
+nvm use 8
 
 cd /tmp/
 
